@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="public/main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    Imager
+  </a>
+</nav>
+<div class="jumbotron vertical-center">
+    <div class="container">
+        <div class="col-md-6 mx-auto text-center">
+            <div class="header-title">
+            <h1 class="wv-heading--title">
+                Upload Your Picture and select filter!
+            </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mx-auto">
+                <div class="myform form ">
+                    <form action="/upload" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="image" id="customFile">
+                                
+                                <label class="custom-file-label" for="customFile"> Upload picture </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select class="custom-select" name="filter">
+                                <option value="Gaussian Blur">Gaussian Blur</option>
+                                <option value="Greyscale">Greyscale</option>
+                                <option value="Histogram Equalization">Histogram Equalization</option>
+                                <option value="Edge Detection">Edge Detection</option>
+                                <option value="Sharpening">Sharpening</option>
+                                <option value="Custom kernel...">Custom kernel...</option>
+                            </select>
+                        </div>
+                        <div class="input-group"hidden>
+                            <input type="text" class="form-control input-sm" name="0" />
+                            <span class="input-group-btn" style="width:0px;"></span>
+                            <input type="text" class="form-control input-sm" style="margin-left:-1px" name="1" />
+                            <span class="input-group-btn" style="width:0px;"></span>
+                            <input type="text" class="form-control input-sm" style="margin-left:-2px" name="2" />
+                        </div>
+                        <div class="input-group" hidden>
+                            <input type="text" class="form-control input-sm" name="3"/>
+                            <span class="input-group-btn" style="width:0px;"></span>
+                            <input type="text" class="form-control input-sm" style="margin-left:-1px" name="4"/>
+                            <span class="input-group-btn" style="width:0px;"></span>
+                            <input type="text" class="form-control input-sm"style="margin-left:-2px" name="5"/>
+                        </div>
+                        <div class="input-group" hidden>
+                            <input type="text" class="form-control input-sm" name="6"/>
+                            <span class="input-group-btn" style="width:0px;"></span>
+                            <input type="text" class="form-control input-sm" style="margin-left:-1px" name="7"/>
+                            <span class="input-group-btn" style="width:0px;"></span>
+                            <input type="text" class="form-control input-sm"style="margin-left:-2px" name="8"/>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="public/matrix.js"></script>
+</body>
+</html>

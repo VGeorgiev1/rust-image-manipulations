@@ -1,0 +1,19 @@
+[package]
+name = "project"
+version = "0.1.0"
+authors = ["VGeorgiev1 <vladdislav.georgiev@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.4.6"
+rocket-multipart-form-data = "0.9.6"
+rocket-download-response = "0.4.13"
+image = "0.23.13"
+rand = "0.8.0"
+
+[dependencies.rocket_contrib]
+version = "0.4.6"
+default-features = false
+features = ["handlebars_templates", "serve"]
